@@ -34,7 +34,7 @@ const MessageHistory = () => {
       entry.date,
       entry.products.map(p => p.name).join('; '),
       entry.products.map(p => `${p.name} (${p.price % 1 === 0 ? p.price.toFixed(0) : p.price} Euro/${p.unit})`).join(', '),
-      entry.products.map(p => `${p.price % 1 === 0 ? p.price.toFixed(0) : p.price} L/${p.unit}`).join('; '),
+      entry.products.map(p => `${p.price % 1 === 0 ? p.price.toFixed(0) : p.price} Euro/${p.unit}`).join('; '),
       entry.contacts.map(c => c.name).join('; '),
       `"${entry.message.replace(/"/g, '""')}"`
     ]);
@@ -138,7 +138,7 @@ const MessageHistory = () => {
                   <div>
                     <span className="font-medium">Produktet: </span>
                     <span className="text-muted-foreground">
-                      {entry.products.map(p => `${p.name} (${p.price % 1 === 0 ? p.price.toFixed(0) : p.price} L/${p.unit})`).join(', ')}
+                      {entry.products.map(p => `${p.name} (${p.price % 1 === 0 ? p.price.toFixed(0) : p.price} Euro/${p.unit})`).join(', ')}
                     </span>
                   </div>
                   <div>
