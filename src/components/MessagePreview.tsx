@@ -45,7 +45,7 @@ const MessagePreview = ({ products, contacts, onSendMessage }: MessagePreviewPro
     
     validProducts.forEach(product => {
       const formattedPrice = product.price % 1 === 0 ? product.price.toFixed(0) : product.price.toString();
-      message += `🔹 ${product.name}: ${formattedPrice} L/${product.unit}\n`;
+      message += `🔹 ${product.name}: ${formattedPrice} Euro/${product.unit}\n`;
     });
     
     message += `\n✨ Fruta dhe perime të freskëta!\n📞 Për porosi mund të më kontaktoni.\n\nFaleminderit! 🙏`;
